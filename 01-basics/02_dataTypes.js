@@ -5,7 +5,7 @@ const myFunc= function(){
     console.log("this is a function")
 }
 // console.table([myFunc(), typeof myFunc]) 
-
+// To convert it into Local country counter style
 const otherNumber = 1000000
 // console.log(otherNumber.toLocaleString('en-in'));
 
@@ -14,10 +14,10 @@ const myArr3 = ["thor2","sp2ider","ipman"]
 
 const newArr=myArr.concat(myArr3)
 // console.log(newArr[5])
-
+// spread operator does the same as concat
 const spreadDef= [...myArr, ...myArr3,"Fiaz"]
 // console.log(spreadDef) 
-
+// use flat if the data comes like down nesting 
 const nestingArr= [1,2,3,[4,5],6,7,[6,8,9,[2,4,3]],10]
 const flatArr = nestingArr.flat(3)
 // console.log(flatArr)

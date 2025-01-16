@@ -1,5 +1,5 @@
 const mySynm = Symbol("Key1")
-
+// symbol syntax like this
 const jsUser= {
     name:"Faiz",
     "Full Name": "Hello World",
@@ -36,7 +36,7 @@ const regularUser= {
     address:"lahore"
     
 }
-
+// get values like this
 // console.log(regularUser.fullname.userfullname.Id[1])
 
 const users =[

@@ -4,6 +4,8 @@ var accountPassword = "34343334434";
 accountCity = "Faisalabad";
 
 let accountState;
+
+// use console.table if there are many variables to log
 console.table([
   accountId,
   accountEmail,

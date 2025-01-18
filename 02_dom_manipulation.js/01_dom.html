@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation and eventlistener</title>
+</head>
+<body>
+    <h2>Event propagation</h2>
+    <p>Bubbling and capturing in addEventListener</p>
+    <p>capturing from top to bottom and bubbling from bottom to top</p>
+    <p>e.stopPropgation()</p>
+   <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+   </div>
+   <button class="button">Click me</button>
+</body>
+<script>
+const parent = document.querySelector('.parent');
+// console.log(parent.children[2])
+// for (let i = 0; i < parent.children.length; i++) {
+//    console.log(parent.children[i].innerHTML) 
+// }
+// const thirdElem = parent.querySelector(':nth-child(1)')
+// console.log(thirdElem)
+
+const user ={
+    username:"Faiz",
+    loginCount:8,
+    signedIn:true,
+
+    getUserDetails: function(){
+        console.log(`Username: ${this.username}`)
+    }
+
+}
+// console.log(user.username)
+// console.log(user.getUserDetails())
+// +++++++++++++++++++++++++ Call Method ++++++++++++++++++++++++
+function SetUserName(username){
+    this.username=username
+}
+
+function createUser(username,email,password){
+    SetUserName.call(this,username)
+    this.email=email
+    this.password=password
+}
+
+const chai = new createUser("Faiz","hello@gmail.com","hello4565")
+// console.log(chai)
+
+// ++++++++++++++++++++++++++  Bind method ++++++++++++++++++++++++
+
+class React{
+    constructor(){
+        this.library="React"
+        this.server= "https://localhost:3000"
+
+        document.querySelector('.button')
+        .addEventListener('click', this.handleClick.bind(this))
+    }
+    handleClick(){
+        console.log(this.library)
+    }
+}
+const chaii= new React()
+
+</script>
+</html>

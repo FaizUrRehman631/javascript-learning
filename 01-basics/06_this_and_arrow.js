@@ -1,3 +1,4 @@
+// +++++++++++++++++ Objects with this ++++++++++++++++++++++++
 const user={
     username:"faiz",
     price:999,
